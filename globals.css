@@ -746,3 +746,344 @@ button {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Dosis", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #49b5e7;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero .container {
+  padding-top: 84px;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #ffffff;
+}
+
+#hero h2 {
+  color: #1c698c;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
+
+#hero .btn-get-started {
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin-top: 25px;
+  color: #fff;
+  background: #49b5e7;
+  text-transform: uppercase;
+}
+
+#hero .btn-get-started:hover {
+  background: #76c7ed;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    height: 100vh;
+    text-align: center;
+  }
+
+  #hero .hero-img img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #hero .hero-img img {
+    width: 80%;
+  }
+}
+
+
+.container {
+  max-width: 100rem;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, .3);
+}
+.containert {
+  max-width: 80rem;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+.containerz {
+  max-width: 80rem;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  background: #0b5fdd;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  row-gap: 2.5rem;
+  color: #fff;
+  padding-block: 1.625rem;
+  border-top: 1px solid rgb(255 255 255 / 15%);
+}
+.cards:last-of-type {
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+.cards-number {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+.cards-title {
+  font-size: clamp(1.125rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
+}
+.cards-description {
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  line-height: 1.2;
+  color: #b8b7b8;
+}
+.cards-image-wrapper {
+  display: none;
+}
+.cards-cta {
+  grid-column: 2 / -1;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+  height: 3.375rem;
+  padding-inline: 1.6875rem;
+  border: 1px solid rgb(79 70 229 / var(--tw-bg-opacity));
+}
+@media (width >= 48em) {
+  .cards {
+    grid-template-columns: 0.25fr 1fr 0.5fr;
+    align-items: center;
+    row-gap: 0;
+  }
+  .cards-cta {
+    grid-column: initial;
+    margin-left: auto;
+  }
+}
+@media (width >= 80em) {
+  .cards {
+    position: relative;
+    grid-template-columns: 0.25fr 1fr 1rem 17rem 1.5rem auto;
+  }
+  .cards::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 120%;
+    height: 100%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: opacity 250ms;
+  }
+  .cards:hover::before {
+    opacity: 1;
+  }
+  .cards-number,
+  .cards-description {
+    transition: color 250ms;
+  }
+  .cards:hover .cards-number,
+  .cards:hover .cards-description {
+    color: #fff;
+  }
+  .cards-image-wrapper {
+    grid-column: 4 / 5;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    translate: 0 -50%;
+    scale: 0.75;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: scale 250ms, opacity 250ms, visibility 250ms;
+  }
+  .cards:hover .cards-image-wrapper {
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+  .cards-cta {
+    grid-column: 6 / -1;
+    transition: background-color 250ms, color 250ms;
+  }
+  .cards:hover .cards-cta {
+    background-color: #fff;
+    color: #121014;
+  }
+  .cards-cta-icon {
+    transition: translate 250ms;
+  }
+  .cards-cta:is(:hover, :focus) .cards-cta-icon {
+    translate: 3px 0;
+  }
+}
+
+

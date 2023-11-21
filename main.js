@@ -2,7 +2,7 @@ import Typed from "typed.js";
 import confetti from "canvas-confetti";
 
 const typed = new Typed("#element", {
-  strings: ["UI/UX Designer", "Software Engineer", "SaaS Enthusiast"],
+  strings: ["Social media management", "SEO optimization", "Brand strategy"],
   typeSpeed: 50,
 });
 
